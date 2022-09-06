@@ -15,10 +15,10 @@
 -(double) accumulator;
 
 // арифметические методы
--(void) add: (double) value;
--(void) substract: (double) value;
--(void) multiple: (double) value;
--(void) divide: (double) value;
+-(double) add: (double) value;
+-(double) substract: (double) value;
+-(double) multiple: (double) value;
+-(double) divide: (double) value;
 
 @end
 
@@ -43,20 +43,24 @@
 }
 
 // MARK: - Арифметические методы
--(void) add: (double) value {
+-(double) add: (double) value {
     accumulator += value;
+    return accumulator;
 }
 
--(void) substract: (double) value {
+-(double) substract: (double) value {
     accumulator -= value;
+    return accumulator;
 }
 
--(void) multiple: (double) value {
+-(double) multiple: (double) value {
     accumulator *= value;
+    return accumulator;
 }
 
--(void) divide: (double) value {
+-(double) divide: (double) value {
     accumulator /= value;
+    return accumulator;
 }
 
 @end
